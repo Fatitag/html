@@ -1,0 +1,74 @@
+#slider{
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-color: rgb(214, 142, 142);
+}
+
+.images{
+position:absolute;
+top: 30px;
+text-align: center;
+left: 22%; 
+max-width: 100%;
+height: 550px;     
+}
+
+
+#img1{z-index: 1;}
+#img2{z-index: 1;}
+#img3{z-index: 1;}
+#img4{z-index: 1;}
+#img5{z-index: 1;}
+
+#bt1{
+position: absolute;
+left: 20px;
+top: 40%;
+width: 50px;
+height: 50px;
+text-align: center;
+font-size: 40px;
+font-weight: 1000;
+color: black;
+background-color: rgba(0 , 0 , 0 , 0.1);
+border:rgba(219, 159, 159, 0.1);
+}
+
+#bt2{
+position: absolute;
+right: 20px;
+top: 40%;
+width: 50px;
+height: 50px;
+text-align: center;
+font-size: 40px;
+font-weight: 1000;
+color:black;
+background-color: rgba(0 , 0 , 0 , 0.1);
+border: rgba(219, 159, 159, 0.1);
+}
+
+#bt1:hover{
+color:white;
+border-radius: 50%;
+cursor: pointer;
+}
+
+#bt2:hover{
+color:white;
+border-radius: 50%;
+cursor: pointer;
+}
+
+button>p{
+position: absolute;
+top: -50px;
+left: 15px;
+}
+
+button>span{
+position: absolute;
+top: -10px;
+left: 15px;
+}
