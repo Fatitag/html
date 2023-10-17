@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .unselected {
+        background-color: white;
+    }
+
+    .selected {
+        background-color: green;
+    }
+        th{
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div>
+            <label for="">Nom</label>
+            <input type="text" id="nom">
+        </div>
+        <br>
+        <br>
+        <div>
+            <label for="">Premon</label>
+            <input type="text" id="prenom">
+        </div>
+        <br><br>
+        <button onclick="Ajouter()">Ajouter</button>
+        <button onclick="supprimer()">Supprimer</button>
+    </section>
+    <br><br>
+    <table border='1'>
+        <thead><th>id</th><th>Nom</th><th>Prenom</th></thead>
+        <tbody id="row">
+        </tbody>
+    </table>
+
+    <script>
+        var i = 0;
+        nom = document.getElementById("nom")
+        prenom = document.getElementById("prenom")
+        row = document.getElementById("row")
+        function Ajouter(){
+            i++;
+            let tr = document.createElement('tr')
+            row.appendChild(tr)
+            tr.innerHTML = '<td>' + i + '</td><td>' + nom.value + '</td><td>' + prenom.value + '</td>';
+            nom.value = ""
+            prenom.value = ""
+            tr.className = "unselected";
+            tr.addEventListener("click", colorerVert);
+        }
+
+    function colorerVert(){
+            const c = event.target.parentNode.className; 
+
+			if (c == "unselected") 
+			{ 
+				event.target.parentNode.className = "selected"; 
+			} else { 
+				event.target.parentNode.className = "unselected"; 
+			} 
+        }
+
+        function supprimer() { 
+
+			const listeElements = document.querySelectorAll(".selected");
+
+			for ( var tr of listeElements ) 
+			{
+				row.removeChild(tr);
+			}
+		}
+
+
+    </script>
+</body>
+</html>
