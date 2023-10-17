@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- 
+	Dans ce fichier, nous allons aborder la partie suivante:
+		- La manipulation de l'HTML
+			* Le changement de style CSS
+	-->
+	<style type="text/css">
+		body {
+			font-size: 50px;
+		}
+
+		div {
+			background-color: red;
+			color: white;
+			width: 300px;
+			height: 300px;
+		}
+	</style>
+	<script>
+		function f() 
+		{
+			var color = document.getElementById("couleur").value;
+			var d = document.getElementById("myDiv");
+			d.style = "background-color: " + color + ";";
+		}
+	</script>
+</head>
+<body>
+	<div id="myDiv"></div>
+	<select id="couleur">
+		<option value="blue">Bleu</option>
+		<option value="red">Rouge</option>
+	</select>
+	<button onclick="f()">OK</button>
+</body>
+</html>

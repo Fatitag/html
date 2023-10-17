@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- 
+	Dans ce fichier, nous allons aborder la partie suivante:
+		- La manipulation de l'HTML
+			* Le changement de contenu d'une balise
+	-->
+	<style type="text/css">
+		body {
+			font-size: 50px;
+		}
+
+		p {
+			background-color: red;
+			color: white;
+		}
+	</style>
+	<script>
+		function f() 
+		{
+			var nom = document.getElementById("nom").value;
+			var p1 = document.getElementById("p1");
+			p1.innerHTML = "Bonjour " + nom;
+		}
+	</script>
+</head>
+<body>
+	<input type="text" id="nom" />
+	<button onclick="f()">OK</button>
+	<p id="p1"></p>
+</body>
+</html>

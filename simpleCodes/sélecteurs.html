@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- 
+	Dans ce fichier, nous allons aborder la partie suivante:
+		- Les sélecteurs JavaScript
+			* La fonction document.getElementById()
+			* La fonction document.getElementsByTagName()
+	-->
+	<style type="text/css">
+		body {
+			font-size: 50px;
+		}
+	</style>
+	<script>
+		function f() 
+		{
+			console.log(document.getElementById('hh'));
+			console.log( document.getElementsByTagName('p') );
+		}
+	</script>
+</head>
+<body>
+	<p id="hh">Bonjour</p>
+	<p>toto</p>
+	<p>toto</p>
+	<span>dév digital 105</span>
+	<div>salut</div>
+	<button onclick="f()">OK</button>
+</body>
+</html>
