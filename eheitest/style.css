@@ -1,0 +1,48 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+
+}
+ul {
+    background-color: black;
+    text-decoration: none;
+    text-align: center;
+    padding: 20px;
+
+}
+li{
+    width: 50%;
+    margin: 20px;
+    text-decoration: none;border: 2px solid;
+    display: inline;
+}
+a{
+    color:white;
+    margin: 10px 10px 10px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: poppins;
+}
+@font-face{
+    font-family: poppins;
+    src: url();
+}
+/* img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+} */
+.parallax{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background:url('images/pic4.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border-radius: 5Opx;
+}
